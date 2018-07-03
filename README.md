@@ -19,17 +19,21 @@ port from your primary port, obviously. I'm using port 80 here.
 
 $ python manage.py runserver 0.0.0.0:80
 
-Now open up a browser and type in http://127.0.0.1:80 and you should see a page
-which says "Book reccomendation system is running" 
+
 
 API
 ---
 
 method: GET 
-url: '/reccomend'
+url: '/'
 parameters:
 	id: Integer
 		The bookid of the book whose similar books you wish to find
+
+example:
+ Go to http://127.0.0.1:80/?id=44
+, you should see
+{"similar_books": [66, 64, 42, 9, 38]}
 
 
 response:
